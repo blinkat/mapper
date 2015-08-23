@@ -1,0 +1,86 @@
+.mapper {
+    position:relative;
+    overflow: hidden;
+}
+
+.mapper-img {
+    margin:0;
+    padding:0;
+    width:0;
+    height:0;
+    position:absolute;
+    z-index: -2;
+    transform: translate3d(0,0,0);
+}
+
+.mapper-mask {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    cursor: move;
+    position: relative;
+}
+
+.mapper-mask-horizonal-warring {
+    width: 100%;
+    height: 10px;
+    opacity: 0;
+    background-repeat: repeat-x;
+    position: absolute;
+}
+
+.mapper-mask-verical-warring {
+    height: 100%;
+    width: 10px;
+    opacity: 0;
+    background-repeat: repeat-y;
+    position: absolute;
+}
+
+.mapper-mask-horizonal-warring,
+.mapper-mask-verical-warring {
+    z-index: -1;
+    transition: opacity .4s;
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+}
+
+.mapper-top,
+.mapper-left {
+    left: 0;
+    top: 0;
+}
+
+.mapper-right {
+    right: 0;
+    top: 0;
+}
+
+.mapper-bottom {
+    bottom: 0;
+    left: 0;
+}
+
+.mapper-mask-horizonal-warring.warring,
+.mapper-mask-verical-warring.warring {
+    opacity: 1;
+}
+
+.grid {
+    left: 0;
+    top: 0;
+    margin:0;
+    padding:0;
+    float: left;
+    background:#cacaca;
+    position:absolute;
+}
+
+.grid img,
+.grid a img{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
